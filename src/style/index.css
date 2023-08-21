@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "MullerRegular";
+  src: url(src/style/font/MullerReg.ttf) format("truetype");
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__header {
+  width: 100%;
+  box-shadow: 0 3px 8px rgba(152, 152, 152, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 1200px;
+}
+
+.header__logo {
+  margin-right: 200px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 45px;
+  line-height: 55px;
+  color: #b99150;
+  font-weight: 800;
+  font-family: "MullerRegular", Verdana, Tahoma;
+}
+
+.title__only {
+  font-size: 45px;
+  line-height: 55px;
+  color: #f6af47;
+  font-weight: 800;
+  font-family: "MullerRegular", Verdana, Tahoma;
+}
+
+.header__menu-item {
+  font-size: 16px;
+  color: #a46b00;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  margin-right: 50px;
+}
