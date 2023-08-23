@@ -1,8 +1,9 @@
 const applicantForm = document.getElementById('form')
-const popup = document.getElementById('popup'); // Фон попап окна
-const popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+const popup = document.getElementById('popup');
+const popupBg = document.querySelector('.popup__bg');
+const imageFullScreen = document.getElementById('container__fullScreen_image');
+const containerFullScreen = document.getElementById('container__fullScreen');
 
-const nameReg = /[A-Za-zА-Яа-яЁё]/
 const sendData = async (data) => {
   return await fetch('https://fakestoreapi.com/carts', {
     method: 'POST',
@@ -28,14 +29,25 @@ async function handleFormSubmit(event) {
 
   if (response.status === 200) {
     popup.classList.add('active');
-    popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+    popupBg.classList.add('active');
   }
 }
 
-document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-  if (e.target === popupBg) { // Если цель клика - фот, то:
-    popup.classList.remove('active'); // И с окна
-    popupBg.classList.remove('active'); // Убираем активный класс с фона
+document.addEventListener('click', (e) => {
+  if (e.target === popupBg) {
+    popup.classList.remove('active');
+    popupBg.classList.remove('active');
+  }
+  if (e.target === containerFullScreen) {
+    containerFullScreen.classList.remove('active');
+    imageFullScreen.src = ''
   }
 });
+
 applicantForm.addEventListener('submit', handleFormSubmit)
+$(".image__pizza").on("click", function(event) {
+  const newSrc = event.currentTarget.currentSrc;
+  imageFullScreen.src = newSrc;
+  containerFullScreen.classList.add('active')
+  console.log(event)
+});

@@ -307,8 +307,29 @@ body {
 .popup__bg.active {
   opacity: 1;
   pointer-events: all;
+  transition: 2s;
 }
 
+.container__fullScreen{
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #181A1A20;
+}
+
+.container__fullScreen.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  position: fixed;
+  pointer-events: all;
+  transition: 2s;
+}
+.container__fullScreen_image{
+  width: 70vw;
+}
 @media screen and (max-width: 1200px) {
   .header {
     width: 800px;
@@ -365,12 +386,6 @@ body {
   }
   .footer__description{
     margin-top: 25px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .big__picture_pizza {
-    /*display: none;*/
   }
 }
 
@@ -437,8 +452,4 @@ body {
   .footer__description{
     margin-top: 25px;
   }
-}
-
-@media screen and (max-width: 520px) {
-
 }
