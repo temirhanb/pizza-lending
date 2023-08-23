@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -63,6 +64,11 @@ body {
   margin-right: 50px;
 }
 
+.header__menu-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .select {
   display: flex;
   margin-top: 100px;
@@ -107,7 +113,7 @@ body {
   height: 90%;
 }
 
-.button__select_pizza{
+.button__select_pizza {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,8 +125,142 @@ body {
   color: #382400;
   font-weight: bold;
   font-family: "MullerRegular", Verdana, Tahoma;
+  outline: none;
+  border: none;
 }
 
-.select__title{
+.button__select_pizza:hover {
+  background-color: rgba(255, 175, 24, 0.68);
+  cursor: pointer;
+}
+
+.select__title {
   margin-bottom: 50px;
+}
+
+.cart {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 140px;
+}
+
+.cart__title {
+  font-size: 35px;
+  line-height: 55px;
+  color: #bd985c;
+  font-weight: bold;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  text-align: center;
+}
+
+.cart__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cart__item {
+  width: 282px;
+  height: 354px;
+  box-shadow: 0 3px 7.5px rgba(152, 152, 152, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart__item_title {
+  font-size: 18px;
+  line-height: 55px;
+  color: #382400;
+  font-weight: bold;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  text-align: center;
+}
+
+.cart__item_description {
+  font-size: 14px;
+  line-height: 18px;
+  color: #181a1a;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  text-align: center;
+}
+
+.cart__item_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 224px;
+  height: 60px;
+  background-color: #ffaf18;
+  font-size: 16px;
+  line-height: 55px;
+  color: #382400;
+  font-weight: bold;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  margin-top: 20px;
+}
+
+.cart__item_button:hover {
+  background-color: rgba(255, 175, 24, 0.68);
+  cursor: pointer;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  flex-direction: row;
+  max-width: 1200px;
+  margin-top: 200px;
+}
+
+.footer__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #b99150;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  margin-top: 70px;
+}
+
+.footer__form_input {
+  width: 310px;
+  padding-left: 20px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 1px solid #b99150;
+  font-size: 18px;
+  line-height: 45px;
+  outline: none;
+  cursor: pointer;
+  color: #cba86e;
+  font-family: "MullerRegular", Verdana, Tahoma;
+  margin-bottom: 20px;
+}
+
+.footer__form_input::placeholder {
+  font-size: 18px;
+  line-height: 45px;
+  color: #cba86e;
+  font-family: "MullerRegular", Verdana, Tahoma;
+}
+
+.footer__form {
+  margin-top: 50px;
+}
+
+.footer__title {
+  margin-right: 110px;
+}
+
+.footer__image {
+  width: 400px;
+  position: absolute;
+  left: 70%;
+  z-index: -1;
+  height: 400px;
 }
