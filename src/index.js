@@ -46,8 +46,7 @@ document.addEventListener('click', (e) => {
 
 applicantForm.addEventListener('submit', handleFormSubmit)
 $(".image__pizza").on("click", function(event) {
-  const newSrc = event.currentTarget.currentSrc;
-  imageFullScreen.src = newSrc;
+  imageFullScreen.src = event.currentTarget.currentSrc;
   containerFullScreen.classList.add('active')
   console.log(event)
 });
