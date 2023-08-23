@@ -1,6 +1,6 @@
 @font-face {
   font-family: "MullerRegular";
-  src: url(src/style/font/MullerReg.ttf) format("truetype");
+  src: url(./font/MullerReg.ttf) format("truetype");
 }
 
 body {

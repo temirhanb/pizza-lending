@@ -154,11 +154,29 @@
     </div>
 
     <form class="footer__form" id="form" action="/apply" method="post">
-      <input oninput="this.value = this.value.replace(/\./g, '')" class="footer__form_input" placeholder="Ваше имя"
-             type="text"/>
-      <input class="footer__form_input" placeholder="Адресс доставки" type="text"/>
-      <input class="footer__form_input" placeholder="Телефон" type="text"/>
-      <button class="button__select_pizza" type="submit">
+      <input
+        oninput="this.value = this.value.replace(/\./g, '')"
+        name="user_name"
+        class="footer__form_input"
+        placeholder="Ваше имя"
+        type="text"
+      />
+      <input
+        class="footer__form_input"
+        name="user_adress"
+        placeholder="Адресс доставки"
+        type="text"
+      />
+      <input
+        class="footer__form_input"
+        name="user_phone"
+        placeholder="Телефон"
+        type="text"
+      />
+      <button
+        class="button__select_pizza"
+        type="submit"
+      >
         <span>
           Оформить заказ
         </span>
